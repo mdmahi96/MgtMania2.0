@@ -38,7 +38,7 @@ const studentsData = [
         "FATHER": "MORSHED AHMED CHOWDHURY",
         "QUOTA": "Special Quota",
         "ADMISSION_ROLL": "1025100379",
-        "FACEBOOK": "",
+        "FACEBOOK": "https://www.facebook.com/ArianaChowdhury2005#",
         "PHOTO": "ARIANA NAWAR CHOWDHURY.jpg"
     },
     {
@@ -66,7 +66,7 @@ const studentsData = [
         "FATHER": "SUFI MD. ATAUR RAHMAN",
         "QUOTA": "Special Quota",
         "ADMISSION_ROLL": "1025101477",
-        "FACEBOOK": "",
+        "FACEBOOK": "https://www.facebook.com/nanjeeba.zahin#",
         "PHOTO": "AZIZAH ZAHIN NANJEEBA.jpg"
     },
     {
@@ -136,7 +136,7 @@ const studentsData = [
         "FATHER": "FARID SHAH",
         "QUOTA": "Non-Quota",
         "ADMISSION_ROLL": "1025106972",
-        "FACEBOOK": "",
+        "FACEBOOK": "https://www.facebook.com/kazifarzan.ahmed.3#",
         "PHOTO": "KAZI FARZAN AHMED.jpg"
     },
     {
@@ -304,7 +304,7 @@ const studentsData = [
         "FATHER": "TANVEER HUSSAIN",
         "QUOTA": "Non-Quota",
         "ADMISSION_ROLL": "1025107393",
-        "FACEBOOK": "",
+        "FACEBOOK": "https://www.facebook.com/nadia.niran#",
         "PHOTO": "NADIA NIRAN HUSSAIN.jpg"
     },
     {
@@ -360,7 +360,7 @@ const studentsData = [
         "FATHER": "MD. NISHATUL ISLAM KHAN",
         "QUOTA": "Special Quota",
         "ADMISSION_ROLL": "1025104847",
-        "FACEBOOK": "",
+        "FACEBOOK": "https://www.facebook.com/nehla.khan.2024#",
         "PHOTO": "NEHLA NISHAT KHAN.jpg"
     },
     {
@@ -444,7 +444,7 @@ const studentsData = [
         "FATHER": "ABUL KALAM AZAD",
         "QUOTA": "Non-Quota",
         "ADMISSION_ROLL": "1025100853",
-        "FACEBOOK": "",
+        "FACEBOOK": "https://www.facebook.com/Samiunazad#",
         "PHOTO": "SAMIUN BIN AZAD.jpg"
     },
     {
@@ -458,7 +458,7 @@ const studentsData = [
         "FATHER": "MD. MAMUNUL HAQ",
         "QUOTA": "Non-Quota",
         "ADMISSION_ROLL": "1025108224",
-        "FACEBOOK": "",
+        "FACEBOOK": "https://www.facebook.com/profile.php?id=61560891480810#",
         "PHOTO": "SARAH HAQUE.jpg"
     },
     {
@@ -514,7 +514,7 @@ const studentsData = [
         "FATHER": "SK. REAZUL ISLAM",
         "QUOTA": "Non-Quota",
         "ADMISSION_ROLL": "1025101114",
-        "FACEBOOK": "",
+        "FACEBOOK": "https://www.facebook.com/profile.php?id=100071997915946#",
         "PHOTO": "SK. ANISA ISLAM.jpg"
     },
     {
@@ -528,7 +528,7 @@ const studentsData = [
         "FATHER": "TAREK MOHAMMAD BHAOWALI",
         "QUOTA": "Special Quota",
         "ADMISSION_ROLL": "1025102594",
-        "FACEBOOK": "",
+        "FACEBOOK": "https://www.facebook.com/tabassum.tarek.7#",
         "PHOTO": "TABASSUM BINTE TAREK.jpg"
     },
     {
@@ -584,7 +584,7 @@ const studentsData = [
         "FATHER": "MD ZAHIDUL ISLAM",
         "QUOTA": "Special Quota",
         "ADMISSION_ROLL": "1025102020",
-        "FACEBOOK": "",
+        "FACEBOOK": "https://www.facebook.com/zaimazaheen.iffat#",
         "PHOTO": "ZAIMA ZAHEEN IFFAT.jpg"
     },
     {
