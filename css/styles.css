@@ -734,3 +734,94 @@ footer img:hover {
     outline: 3px solid var(--primary-light);
     outline-offset: 2px;
 }
+
+/* Add these styles to your existing CSS file */
+
+/* Responsive table styles */
+.table-responsive {
+    overflow-x: auto;
+    width: 100%;
+}
+
+/* Mobile filter toggle button */
+.mobile-filter-toggle {
+    display: none;
+    width: 100%;
+    margin: 1rem 0;
+}
+
+/* Header layout adjustments */
+header {
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 1.5rem;
+}
+
+.header-content {
+    flex: 1;
+}
+
+/* Mobile-specific styles */
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+    
+    .container {
+        padding: 0.5rem;
+    }
+    
+    .card {
+        padding: 1rem;
+        margin-bottom: 1rem;
+    }
+    
+    .mobile-filter-toggle {
+        display: block;
+    }
+    
+    .section-filters {
+        display: none;
+    }
+    
+    .section-filters.active {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    th, td {
+        padding: 0.5rem;
+        font-size: 0.9rem;
+    }
+    
+    .pagination {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .pagination button {
+        margin: 0.2rem;
+    }
+    
+    .modal-content {
+        width: 90%;
+        max-width: none;
+        margin: 2rem auto;
+    }
+}
+
+/* Extra small devices */
+@media screen and (max-width: 480px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+    
+    header h5 {
+        font-size: 1rem;
+    }
+    
+    .logo-container i {
+        font-size: 2rem;
+    }
+}
