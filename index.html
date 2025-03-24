@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="icon" type="image/x-icon" href="mgt.jpg">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Management Mania</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <i class="fa-solid fa-graduation-cap"></i>
+        </div>
+        <div class="header-content">
+            <h1>Management Mania</h1>
+            <h5>Lead To Glory</h5>
+			<p>Management 10 - Section A & B</p>
+			<img src="mgt.jpg" class="profile-img" style="border-radius: 25px; width:10%; margin:-99px auto;" align="right">
+        </div>
+    </header>
+    
+    <div class="container">
+        <div class="card search-container">
+            <h2><i class="fas fa-search"></i> Find Students</h2>
+            <p>Search by name or roll number</p>
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Enter name or roll number...">
+                <button id="searchBtn" class="btn primary-btn">Search</button>
+                <button id="resetBtn" class="btn secondary-btn">Reset</button>
+            </div>
+            <div class="section-filters">
+	<button id="allSectionsBtn" class="btn filter-btn"><i class="fas fa-globe"></i> All Sections</button>
+    <button id="sectionABtn" class="btn filter-btn"><i class="fas fa-users"></i> Section A</button>
+    <button id="sectionBBtn" class="btn filter-btn"><i class="fas fa-users"></i> Section B</button>
+	<!-- Add migrated button -->
+    <button id="migratedBtn" class="btn filter-btn"><i class="fas fa-exchange-alt"></i> Migrated</button>
+    
+    
+</div>
+        </div>
+        
+        <div class="card section-info">
+            <p><strong><i class="fas fa-eye"></i> Currently viewing:</strong> <span id="currentSection">All Students</span></p>
+            <p><strong><i class="fas fa-user-graduate"></i> Total students:</strong> <span id="totalStudents">0</span></p>
+        </div>
+        
+        <div class="card students-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th><i class="fas fa-user"></i> Name</th>
+                        <th><i class="fas fa-id-card"></i> ID</th>
+                        <th><i class="fas fa-layer-group"></i> Section</th>
+                        <th><i class="fas fa-cogs"></i> Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="studentsTableBody">
+                    <!-- Student rows will be added here by JavaScript -->
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="pagination" id="pagination">
+            <!-- Pagination buttons will be added here by JavaScript -->
+        </div>
+    </div>
+    
+    <div id="studentModal" class="student-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="student-header">
+                <h2 id="modalStudentName">Student Name</h2>
+                <p>BUP MGT 10</p>
+            </div>
+            <div class="student-info" id="studentInfo">
+                <!-- Student details will be added here by JavaScript -->
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+         <p style="margin-top: 15px; color: ##ffffff;">&copy; 2025 . <strong><a style="color: ##ffffff;" href="https://mdmahi96.github.io/mahi.com/">MD Muztaba Rafid Mahi (MGT-10)</a></strong>.</br> All rights reserved.</p>
+		 <a href="https://www.facebook.com/Muztaba.Rafid.Mahi">
+        <img style="border-radius: 100px; display: block; margin: 0 auto; width: 60px;" src="Mahi.jpg" alt="Mahi">
+    </a>
+    </footer>
+    
+    <script src="js/script.js"></script>
+</body>
+</html>
