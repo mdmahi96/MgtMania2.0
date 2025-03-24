@@ -7,18 +7,94 @@
     <title>Management Mania</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Mobile Navigation Styles */
+        .mobile-nav-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: #fff;
+            cursor: pointer;
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            z-index: 100;
+        }
+        
+        /* Mobile-specific header adjustments */
+        @media screen and (max-width: 768px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+                padding: 1rem;
+            }
+            
+            .header-content {
+                width: 100%;
+                margin-top: 1rem;
+            }
+            
+            .logo-container {
+                margin-bottom: 0.5rem;
+            }
+            
+            .profile-img {
+                position: relative !important;
+                margin: 1rem auto !important;
+                display: block !important;
+                width: 80px !important;
+            }
+            
+            .mobile-nav-toggle {
+                display: block;
+            }
+            
+            .section-filters {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+            }
+            
+            .section-filters.active {
+                display: flex;
+            }
+            
+            .section-filters .btn {
+                margin: 0.3rem 0;
+                width: 100%;
+            }
+            
+            .search-box {
+                flex-direction: column;
+            }
+            
+            .search-box input {
+                margin-bottom: 0.5rem;
+                width: 100%;
+            }
+            
+            .search-box .btn {
+                width: 100%;
+                margin: 0.3rem 0;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
+        <button class="mobile-nav-toggle" id="mobileNavToggle">
+            <i class="fas fa-bars"></i>
+        </button>
         <div class="logo-container">
             <i class="fa-solid fa-graduation-cap"></i>
         </div>
         <div class="header-content">
             <h1>Management Mania</h1>
             <h5>Lead To Glory</h5>
-			<p>Management 10 - Section A & B</p>
-			<img src="mgt.jpg" class="profile-img" style="border-radius: 25px; width:10%; margin:-99px auto;" align="right">
+            <p>Management 10 - Section A & B</p>
         </div>
+        <img src="mgt.jpg" class="profile-img" style="border-radius: 25px; width:5%;" alt="Management">
     </header>
     
     <div class="container">
@@ -30,15 +106,15 @@
                 <button id="searchBtn" class="btn primary-btn">Search</button>
                 <button id="resetBtn" class="btn secondary-btn">Reset</button>
             </div>
-            <div class="section-filters">
-	<button id="allSectionsBtn" class="btn filter-btn"><i class="fas fa-globe"></i> All Sections</button>
-    <button id="sectionABtn" class="btn filter-btn"><i class="fas fa-users"></i> Section A</button>
-    <button id="sectionBBtn" class="btn filter-btn"><i class="fas fa-users"></i> Section B</button>
-	<!-- Add migrated button -->
-    <button id="migratedBtn" class="btn filter-btn"><i class="fas fa-exchange-alt"></i> Migrated</button>
-    
-    
-</div>
+            <button class="btn primary-btn mobile-filter-toggle" id="filterToggle">
+                <i class="fas fa-filter"></i> Toggle Filters
+            </button>
+            <div class="section-filters" id="sectionFilters">
+                <button id="allSectionsBtn" class="btn filter-btn"><i class="fas fa-globe"></i> All Sections</button>
+                <button id="sectionABtn" class="btn filter-btn"><i class="fas fa-users"></i> Section A</button>
+                <button id="sectionBBtn" class="btn filter-btn"><i class="fas fa-users"></i> Section B</button>
+                <button id="migratedBtn" class="btn filter-btn"><i class="fas fa-exchange-alt"></i> Migrated</button>
+            </div>
         </div>
         
         <div class="card section-info">
@@ -47,19 +123,21 @@
         </div>
         
         <div class="card students-container">
-            <table>
-                <thead>
-                    <tr>
-                        <th><i class="fas fa-user"></i> Name</th>
-                        <th><i class="fas fa-id-card"></i> ID</th>
-                        <th><i class="fas fa-layer-group"></i> Section</th>
-                        <th><i class="fas fa-cogs"></i> Actions</th>
-                    </tr>
-                </thead>
-                <tbody id="studentsTableBody">
-                    <!-- Student rows will be added here by JavaScript -->
-                </tbody>
-            </table>
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th><i class="fas fa-user"></i> Name</th>
+                            <th><i class="fas fa-id-card"></i> ID</th>
+                            <th><i class="fas fa-layer-group"></i> Section</th>
+                            <th><i class="fas fa-cogs"></i> Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="studentsTableBody">
+                        <!-- Student rows will be added here by JavaScript -->
+                    </tbody>
+                </table>
+            </div>
         </div>
         
         <div class="pagination" id="pagination">
@@ -81,12 +159,44 @@
     </div>
     
     <footer>
-         <p style="margin-top: 15px; color: ##ffffff;">&copy; 2025 . <strong><a style="color: ##ffffff;" href="https://mdmahi96.github.io/mahi.com/">MD Muztaba Rafid Mahi (MGT-10)</a></strong>.</br> All rights reserved.</p>
-		 <a href="https://www.facebook.com/Muztaba.Rafid.Mahi">
-        <img style="border-radius: 100px; display: block; margin: 0 auto; width: 60px;" src="Mahi.jpg" alt="Mahi">
-    </a>
+        <p style="margin-top: 15px; color: ##ffffff;">&copy; 2025 . <strong><a style="color: ##ffffff;" href="https://mdmahi96.github.io/mahi.com/">MD Muztaba Rafid Mahi (MGT-10)</a></strong>.</br> All rights reserved.</p>
+        <a href="https://www.facebook.com/Muztaba.Rafid.Mahi">
+            <img style="border-radius: 100px; display: block; margin: 0 auto; width: 60px;" src="Mahi.jpg" alt="Mahi">
+        </a>
     </footer>
     
     <script src="js/script.js"></script>
+    <script>
+        // Mobile Navigation Script
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile menu toggle
+            const mobileNavToggle = document.getElementById('mobileNavToggle');
+            const filterToggle = document.getElementById('filterToggle');
+            const sectionFilters = document.getElementById('sectionFilters');
+            
+            if(filterToggle) {
+                filterToggle.addEventListener('click', function() {
+                    sectionFilters.classList.toggle('active');
+                });
+            }
+            
+            // Responsive table handling for small screens
+            const addResponsiveTables = function() {
+                const tables = document.querySelectorAll('table');
+                tables.forEach(table => {
+                    const wrapper = document.createElement('div');
+                    wrapper.classList.add('table-responsive');
+                    table.parentNode.insertBefore(wrapper, table);
+                    wrapper.appendChild(table);
+                });
+            };
+            
+            // Execute on page load
+            if(document.querySelector('table') && !document.querySelector('.table-responsive')) {
+                addResponsiveTables();
+            }
+        });
+    </script>
+</head>
 </body>
 </html>
