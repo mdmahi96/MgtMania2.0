@@ -224,7 +224,7 @@ const studentsData = [
         "PHOTO": "MD. RUBAYET FERDOUS RAFIN.jpg"
     },
     {
-        "NAME": "MD. SAIFULLAH AL SAMI",
+        "NAME": "MD. SAIFULLAH AL SAMI (CR)",
         "SECTION": "BUP MGT 10 sec A",
         "ROLL": "25241610129",
         "Sl No": "36",
@@ -518,7 +518,7 @@ const studentsData = [
         "PHOTO": "SK. ANISA ISLAM.jpg"
     },
     {
-        "NAME": "TABASSUM BINTE TAREK",
+        "NAME": "TABASSUM BINTE TAREK (CR)",
         "SECTION": "BUP MGT 10 sec A",
         "ROLL": "25241610077",
         "Sl No": "13",
@@ -952,7 +952,7 @@ const studentsData = [
         "PHOTO": "MD. SAMIUL SHIKDER.jpg"
     },
     {
-        "NAME": "MD. TAWHIDUR RAHMAN",
+        "NAME": "MD. TAWHIDUR RAHMAN (CR)",
         "SECTION": "BUP MGT 10 sec B",
         "ROLL": "25241610094",
         "Sl No": "23",
@@ -1054,7 +1054,7 @@ const studentsData = [
         "PHOTO": "NOSHIN TARANNUM ARA.jpg"
     },
     {
-        "NAME": "NUSAIBA RAHMAN",
+        "NAME": "NUSAIBA RAHMAN (CR)",
         "SECTION": "BUP MGT 10 sec B",
         "ROLL": "25241610086",
         "Sl No": "19",
@@ -2365,8 +2365,8 @@ function showStudentDetails(roll) {
             { key: 'GENDER', label: 'Gender', icon: 'venus-mars' },
             { key: 'FATHER', label: 'Father\'s Name', icon: 'user' },
             { key: 'ADMISSION_ROLL', label: 'Admission Roll', icon: 'id-badge' },
-            
-            
+            { key: 'QUOTA', label: 'Quota', icon: 'certificate' },
+            { key: 'PHOTO', label: 'Photo Filename', icon: 'image' }
         ];
         
         // Create a container for staggered animation
