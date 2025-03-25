@@ -126,6 +126,20 @@ const studentsData = [
         "PHOTO": "HUMAIRA ZARIN TALUKDER.jpg"
     },
     {
+        "NAME": "ISKAT JAHAN PUSPO",
+        "SECTION": "BUP MGT 10 sec A",
+        "ROLL": "25241610149",
+        "Sl No": "46",
+        "EMAIL": "iskatjahanp@gmail.com",
+        "PHONE": "01818-468919",
+        "GENDER": "Female",
+        "FATHER": "MD. ISHUQ MIAH",
+        "QUOTA": "Special Quota",
+        "ADMISSION_ROLL": "1025101218",
+        "FACEBOOK": "https://www.facebook.com/profile.php?id=61556196453414#",
+        "PHOTO": "ISKAT JAHAN PUSPO.jpg"
+    },
+    {
         "NAME": "KAZI FARZAN AHMED",
         "SECTION": "BUP MGT 10 sec A",
         "ROLL": "25241610093",
@@ -378,6 +392,20 @@ const studentsData = [
         "PHOTO": "NISHAT LAMIA OISHI.jpg"
     },
     {
+        "NAME": "RAYYAN AHMED CHOWDHURY",
+        "SECTION": "BUP MGT 10 sec A",
+        "ROLL": "25241610151",
+        "Sl No": "47",
+        "EMAIL": "ahmedrayn6@gmail.com",
+        "PHONE": "01778-330044",
+        "GENDER": "Male",
+        "FATHER": "OSMAN GONI CHOWDHURY",
+        "QUOTA": "Non-Quota",
+        "ADMISSION_ROLL": "1025110215",
+        "FACEBOOK": "https://www.facebook.com/rayyan.ahmed.chowdhury#",
+        "PHOTO": "RAYYAN AHMED CHOWDHURY.jpg"
+    },
+    {
         "NAME": "RAZZIN MUHAMMAD DILSHAN",
         "SECTION": "BUP MGT 10 sec A",
         "ROLL": "25241610121",
@@ -474,6 +502,20 @@ const studentsData = [
         "ADMISSION_ROLL": "1025104030",
         "FACEBOOK": "https://www.facebook.com/sarah.mahbub.03",
         "PHOTO": "SARAH MAHBUB.jpg"
+    },
+    {
+        "NAME": "SHALAHIN SHAFIN SHOJIB",
+        "SECTION": "BUP MGT 10 sec A",
+        "ROLL": "25241610153",
+        "Sl No": "48",
+        "EMAIL": "shafinsd33@gmail.com",
+        "PHONE": "01908-616623",
+        "GENDER": "Male",
+        "FATHER": "MD MANNAN SIKDER",
+        "QUOTA": "Special Quota",
+        "ADMISSION_ROLL": "1025101152",
+        "FACEBOOK": "https://www.facebook.com/shalahinshafin.shojib#",
+        "PHOTO": "SHALAHIN SHAFIN SHOJIB.jpg"
     },
     {
         "NAME": "SHARIKA TAZRIA",
@@ -994,6 +1036,20 @@ const studentsData = [
         "PHOTO": "MOHAMMAD MASHRUR RAHMAN.jpg"
     },
     {
+        "NAME": "MST. ISRAT JAHAN SADIA",
+        "SECTION": "BUP MGT 10 sec B",
+        "ROLL": "25241610150",
+        "Sl No": "49",
+        "EMAIL": "isratjahansadia12345@gmail.com",
+        "PHONE": "01310-999162",
+        "GENDER": "Female",
+        "FATHER": "MD. NURUZZAMAN",
+        "QUOTA": "Special Quota",
+        "ADMISSION_ROLL": "1025109216",
+        "FACEBOOK": "https://www.facebook.com/israt.jahan.sadia.704010#",
+        "PHOTO": "MST. ISRAT JAHAN SADIA.jpg"
+    },
+    {
         "NAME": "MUMTAHANA TUBA",
         "SECTION": "BUP MGT 10 sec B",
         "ROLL": "25241610030",
@@ -1178,6 +1234,20 @@ const studentsData = [
         "ADMISSION_ROLL": "1025101026",
         "FACEBOOK": "https://www.facebook.com/Daud.Madridista22",
         "PHOTO": "SHAIKH ABU DAUD.jpg"
+    },
+    {
+        "NAME": "SILVIA KHAN NOVA",
+        "SECTION": "BUP MGT 10 sec B",
+        "ROLL": "25241610152",
+        "Sl No": "50",
+        "EMAIL": "silviakhannova@gmail.com",
+        "PHONE": "01775-784434",
+        "GENDER": "Female",
+        "FATHER": "MD. ABUL KALAM KHAN",
+        "QUOTA": "Special Quota",
+        "ADMISSION_ROLL": "1025106733",
+        "FACEBOOK": "",
+        "PHOTO": "SILVIA KHAN NOVA.jpg"
     },
     {
         "NAME": "SYEDA PARIZAD ROOMY",
@@ -1391,7 +1461,7 @@ const studentsData = [
     },
     {
         "NAME": "SAMIA FARUK",
-        "SECTION": "(BUP MGT 10 sec A)",
+        "SECTION": "(Migrated)",
         "ROLL": "25241610112",
         "Sl No": "Migrated",
         "EMAIL": "samiafaruk3@gmail.com",
@@ -1404,7 +1474,6 @@ const studentsData = [
         "PHOTO": "SAMIA FARUK.jpg"
     }
 ];
-
 // Variables for pagination and filtering
 const itemsPerPage = 10;
 let currentPage = 1;
