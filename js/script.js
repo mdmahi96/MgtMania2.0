@@ -864,7 +864,7 @@ const studentsData = [
         "FATHER": "KAZI GOLAM MOSTAFA",
         "QUOTA": "Non-Quota",
         "ADMISSION_ROLL": "1025106612",
-        "FACEBOOK": "",
+        "FACEBOOK": "https://www.facebook.com/share/1FWqQdWkwz/",
         "PHOTO": "KAZI RAISA MOSTAFA BORSHONA.jpg"
     },
     {
