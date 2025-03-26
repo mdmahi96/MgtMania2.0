@@ -898,7 +898,7 @@ nav ul li a:hover {
         top: 0;
         left: -100%;
         width: 100%;
-        height: 50vh;
+        height: 25vh;
         background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-color) 100%);
         flex-direction: column;
         justify-content: center;
