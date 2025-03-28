@@ -1,215 +1,178 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<link rel="icon" type="image/x-icon" href="mgt.jpg">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Management Mania</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        /* Mobile Navigation Styles */
-        .mobile-nav-toggle {
-            display: none;
-            background: none;
-            border: none;
-            font-size: 1.5rem;
-            color: #fff;
-            cursor: pointer;
-            position: absolute;
-            top: 1rem;
-            right: 1rem;
-            z-index: 100;
-        }
-        
-        /* Mobile-specific header adjustments */
-        @media screen and (max-width: 768px) {
-            header {
-                flex-direction: column;
-                text-align: center;
-                padding: 1rem;
-            }
-            
-            .header-content {
-                width: 100%;
-                margin-top: 1rem;
-            }
-            
-            .logo-container {
-                margin-bottom: 0.5rem;
-            }
-            
-            .profile-img {
-                position: relative !important;
-                margin: 1rem auto !important;
-                display: block !important;
-                width: 80px !important;
-            }
-            
-            .mobile-nav-toggle {
-                display: block;
-            }
-            
-            .section-filters {
-                display: none;
-                flex-direction: column;
-                width: 100%;
-            }
-            
-            .section-filters.active {
-                display: flex;
-            }
-            
-            .section-filters .btn {
-                margin: 0.3rem 0;
-                width: 100%;
-            }
-            
-            .search-box {
-                flex-direction: column;
-            }
-            
-            .search-box input {
-                margin-bottom: 0.5rem;
-                width: 100%;
-            }
-            
-            .search-box .btn {
-                width: 100%;
-                margin: 0.3rem 0;
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BUP Express</title>
+  <link rel="icon" type="image/x-icon" href="bus.png">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 </head>
-<body>
-	
-	
-	<header>
-    <img src="mgt.jpg" class="profile-img" style="border-radius: 15px; width: 8%; margin-right: 30px;" alt="Management">
 
-<div class="header-content">
-    <h2>Management Mania</h2>
-    <h5>Leading with Clarity</h5>
-    <p>MGT X</p>
-</div>
-    </div>
+<body class="bg-slate-50 min-h-screen">
+  <div class="max-w-7xl mx-auto p-4">
+    <!-- Header -->
+    <header class="bg-gradient-to-r from-blue-900 to-blue-700 text-white rounded-2xl shadow-2xl mb-8 transform transition duration-500 hover:shadow-3xl">
+      <nav class="container mx-auto px-6 py-4">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center space-x-4">
+            <span class="text-3xl">🚌</span>
+            <h1 class="text-2xl font-bold tracking-tight">BUP Express</h1>
+          </div>
+          <div class="hidden md:flex items-center space-x-8">
+		    <a href="index.html" class="hover:text-blue-200 transition-colors">Home</a>
+            <a href="route.html" class="hover:text-blue-200 transition-colors">Routes</a>
+			<a href="about.html" class="hover:text-blue-200 transition-colors">About</a>
+            <a href="https://mdmahi96.github.io/mahi.com/?i=1" class="hover:text-blue-200 transition-colors">Contact</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
     
-    <button class="mobile-nav-toggle" id="mobileNavToggle">
-        <i class="fas fa-bars"></i>
-    </button>
-    
-    <nav id="mainNavigation">
-        <button class="mobile-nav-close" id="mobileNavClose">
-            <i class="fas fa-times"></i>
-        </button>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="About.html">About</a></li>
-            <li><a href="https://mdmahi96.github.io/mahi.com/?i=1">Contact</a></li>
-        </ul>
-    </nav>
-</header>
-    
-    <div class="container">
-        <div class="card search-container">
-            <h2><i class="fas fa-search"></i> Find Students</h2>
-            <p>Search by name or roll number</p>
-            <div class="search-box">
-                <input type="text" id="searchInput" placeholder="Enter name or roll number...">
-                <button id="searchBtn" class="btn primary-btn">Search</button>
-                <button id="resetBtn" class="btn secondary-btn">Reset</button>
-            </div>
-            <button class="btn primary-btn mobile-filter-toggle" id="filterToggle">
-                <i class="fas fa-filter"></i> Toggle Filters
-            </button>
-            <div class="section-filters" id="sectionFilters">
-                <button id="allSectionsBtn" class="btn filter-btn"><i class="fas fa-globe"></i> All Sections</button>
-                <button id="sectionABtn" class="btn filter-btn"><i class="fas fa-users"></i> Section A</button>
-                <button id="sectionBBtn" class="btn filter-btn"><i class="fas fa-users"></i> Section B</button>
-                <button id="migratedBtn" class="btn filter-btn"><i class="fas fa-exchange-alt"></i> Migrated</button>
-            </div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	  <!-- Search section -->
+    <div class="p-6 bg-gray-50 border-b border-gray-200">
+      <div class="relative max-w-2xl mx-auto">
+        <div class="flex shadow-md rounded-lg overflow-hidden animate__animated animate__fadeIn animate__delay-0s">
+          <input
+            type="text"
+            id="search-input"
+            placeholder="Enter stoppage name..."
+            class="w-full p-4 border-0 focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-700"
+          >
+          <button 
+            id="search-button"
+            class="bg-blue-700 text-white px-6 hover:bg-blue-800 transition duration-200 flex items-center justify-center"
+            aria-label="Search"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-search"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+            <span class="ml-2 hidden md:inline">Search</span>
+          </button>
         </div>
         
-        <div class="card section-info">
-            <p><strong><i class="fas fa-eye"></i> Currently viewing:</strong> <span id="currentSection">All Students</span></p>
-            <p><strong><i class="fas fa-user-graduate"></i> Total students:</strong> <span id="totalStudents">0</span></p>
+        <div id="suggestion-container" class="absolute z-10 w-full bg-white border border-gray-300 rounded-b-lg shadow-lg max-h-64 overflow-y-auto mt-1 hidden">
+          <!-- Suggestions will be populated here -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Results section -->
+    <div class="p-6">
+      <div id="results-container">
+        <!-- Initial message -->
+        <div id="initial-message" class="text-center p-10 bg-gray-50 rounded-lg border border-gray-200 animate__animated animate__fadeIn">
+          <div class="mb-6">
+            <div class="w-24 h-24 bg-blue-100 rounded-full mx-auto flex items-center justify-center">
+              <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-blue-600"><path d="M15 11h.01"/><path d="M11 15h.01"/><path d="M16 16h.01"/><path d="m2 9 20-5v12L2 21V9Z"/><path d="M6 12v5"/><path d="M10 9v9"/></svg>
+            </div>
+          </div>
+          <h3 class="text-xl font-medium text-gray-800">Search for Stoppages</h3>
+          <p class="text-gray-500 mt-2">Enter a stoppage name to find associated bus routes</p>
         </div>
         
-        <div class="card students-container">
-            <div class="table-responsive">
-                <table>
-                    <thead>
-                        <tr>
-                            <th><i class="fas fa-user"></i> Name</th>
-                            <th><i class="fas fa-id-card"></i> ID</th>
-                            <th><i class="fas fa-layer-group"></i> Section</th>
-                            <th><i class="fas fa-cogs"></i> Actions</th>
-                        </tr>
-                    </thead>
-                    <tbody id="studentsTableBody">
-                        <!-- Student rows will be added here by JavaScript -->
-                    </tbody>
-                </table>
-            </div>
+        <!-- No results message (initially hidden) -->
+        <div id="no-results" class="text-center p-10 bg-gray-50 rounded-lg border border-gray-200 hidden animate__animated animate__fadeIn">
+          <div class="text-gray-400 mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mx-auto opacity-50"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+          </div>
+          <p class="text-gray-700 font-medium text-lg">No buses found for "<span id="no-results-term"></span>"</p>
+          <p class="text-gray-500 mt-2">Please try searching for another stoppage</p>
         </div>
         
-        <div class="pagination" id="pagination">
-            <!-- Pagination buttons will be added here by JavaScript -->
-        </div>
-    </div>
-    
-    <div id="studentModal" class="student-modal">
-        <div class="modal-content">
-            <span class="close-modal">&times;</span>
-            <div class="student-header">
-                <h2 id="modalStudentName">Student Name</h2>
-                <p>BUP MGT 10</p>
+        <!-- Results table (initially hidden) -->
+        <div id="results-table-container" class="hidden animate__animated animate__fadeIn">
+          <div class="flex items-center mb-4">
+            <div class="w-2 h-6 bg-blue-600 mr-3"></div>
+            <h2 class="text-xl font-semibold text-gray-800">Buses via <span id="selected-stoppage" class="text-blue-700"></span></h2>
+          </div>
+          
+          <!-- Sort options -->
+          <div class="mb-4 flex flex-wrap gap-2">
+            <div class="text-sm text-gray-600 flex items-center mr-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-1"><path d="m3 16 4 4 4-4"/><path d="M7 20V4"/><path d="M11 4h10"/><path d="M11 8h7"/><path d="M11 12h4"/></svg>
+              Sort by:
             </div>
-            <div class="student-info" id="studentInfo">
-                <!-- Student details will be added here by JavaScript -->
+            <button class="sort-button px-3 py-1 text-sm rounded border border-gray-300 hover:bg-blue-50 transition-colors" data-sort="routeNo">Route No</button>
+            <button class="sort-button px-3 py-1 text-sm rounded border border-gray-300 hover:bg-blue-50 transition-colors" data-sort="morning">Noon Time</button>
+            <button class="sort-button px-3 py-1 text-sm rounded border border-gray-300 hover:bg-blue-50 transition-colors" data-sort="noon">Morning Time</button>
+			</div>
+            <!--button class="sort-button px-3 py-1 text-sm rounded border border-gray-300 hover:bg-blue-50 transition-colors" data-sort="afternoon"></button>
+          
+		 
+          
+          <!-- Note about times -->
+          <div class="mb-4 p-3 bg-blue-50 border-l-4 border-blue-500 text-blue-700 text-sm rounded">
+            <div class="flex items-start">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2 mt-0.5"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+              <span><strong>Note:</strong> Times shown are for starting point location of each route.</span>
             </div>
+          </div>
+          
+          <div class="overflow-x-auto rounded-lg shadow">
+            <table class="min-w-full divide-y divide-gray-200">
+              <thead class="bg-gray-100">
+                <tr>
+                  <th class="py-3 px-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Route No.</th>
+                  <th class="py-3 px-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Bus No.</th>
+                  <th class="py-3 px-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Route</th>
+                  <th class="py-3 px-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Morning</th>
+                  <th class="py-3 px-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Noon</th>
+                  <th class="py-3 px-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Afternoon</th>
+                  <th class="py-3 px-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Driver Contact</th>
+                </tr>
+              </thead>
+              <tbody id="results-table-body" class="bg-white divide-y divide-gray-200">
+                <!-- Results will be populated here -->
+              </tbody>
+            </table>
+          </div>
         </div>
+      </div>
     </div>
-    
-    <footer>
-        <p style="margin-top: 15px; color: ##ffffff;">&copy; 2025 . <strong><a style="color: ##ffffff;" href="https://mdmahi96.github.io/mahi.com/">MD Muztaba Rafid Mahi (MGT-10)</a></strong>.</br> All rights reserved.</p>
-        <a href="https://www.facebook.com/Muztaba.Rafid.Mahi">
-            <img style="border-radius: 100px; display: block; margin: 0 auto; width: 60px;" src="Mahi.jpg" alt="Mahi">
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+   <!-- Footer -->
+    <footer class="mt-12 p-6 bg-gradient-to-r from-blue-900 to-blue-700 text-white rounded-2xl shadow-2xl">
+      <div class="text-center space-y-4">
+        <p class="text-sm opacity-90">This is not an official website. It serves as a digital copy of the notice board provided by the 
+		<strong>MT Section</strong>. Bus schedules, routes, and other information are subject to change. Please refer to the official notice for the latest updates.</p>
+        <p class="text-xs opacity-75">&copy; 2025 MD Muztaba Rafid Mahi. All rights reserved.</p>
+        <a href="https://www.facebook.com/Muztaba.Rafid.Mahi" class="inline-block">
+          <img src="Mahi.jpg" alt="Mahi" class="w-16 h-16 rounded-full border-4 border-white hover:border-blue-300 transition-colors">
         </a>
+      </div>
     </footer>
-    
-    <script src="js/script.js"></script>
-    <script>
-        // Mobile Navigation Script
-        document.addEventListener('DOMContentLoaded', function() {
-            // Mobile menu toggle
-            const mobileNavToggle = document.getElementById('mobileNavToggle');
-            const filterToggle = document.getElementById('filterToggle');
-            const sectionFilters = document.getElementById('sectionFilters');
-            
-            if(filterToggle) {
-                filterToggle.addEventListener('click', function() {
-                    sectionFilters.classList.toggle('active');
-                });
-            }
-            
-            // Responsive table handling for small screens
-            const addResponsiveTables = function() {
-                const tables = document.querySelectorAll('table');
-                tables.forEach(table => {
-                    const wrapper = document.createElement('div');
-                    wrapper.classList.add('table-responsive');
-                    table.parentNode.insertBefore(wrapper, table);
-                    wrapper.appendChild(table);
-                });
-            };
-            
-            // Execute on page load
-            if(document.querySelector('table') && !document.querySelector('.table-responsive')) {
-                addResponsiveTables();
-            }
-        });
-    </script>
-</head>
+  </div>
+
+  <script src="js/busData.js"></script>
+  <script src="js/app.js"></script>
 </body>
 </html>
