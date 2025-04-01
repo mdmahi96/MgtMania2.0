@@ -105,7 +105,8 @@
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="About.html">About</a></li>
-            <li><a href="https://mdmahi96.github.io/mahi.com/?i=1">Contact</a></li>
+            <li><a href="https://mrmahi.vercel.app/?i=1">Contact</a></li>
+			<li><a href="#" id="logoutBtn">Logout</a></li>
         </ul>
     </nav>
 </header>
@@ -137,7 +138,7 @@
     </div>
     
     <footer>
-        <p style="margin-top: 15px; color: ##ffffff;">&copy; 2025 . <strong><a style="color: ##ffffff;" href="https://mdmahi96.github.io/mahi.com/">MD Muztaba Rafid Mahi (MGT-10)</a></strong>.</br> All rights reserved.</p>
+        <p style="margin-top: 15px; color: ##ffffff;">&copy; 2025 . <strong><a style="color: ##ffffff;" href="https://mrmahi.vercel.app/">MD Muztaba Rafid Mahi (MGT-10)</a></strong>.</br> All rights reserved.</p>
         <a href="https://www.facebook.com/Muztaba.Rafid.Mahi">
             <img style="border-radius: 100px; display: block; margin: 0 auto; width: 60px;" src="Mahi.jpg" alt="Mahi">
         </a>
@@ -172,6 +173,17 @@
             // Execute on page load
             if(document.querySelector('table') && !document.querySelector('.table-responsive')) {
                 addResponsiveTables();
+            }
+      
+		
+		// Logout functionality
+            const logoutBtn = document.getElementById('logoutBtn');
+            if (logoutBtn) {
+                logoutBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    sessionStorage.removeItem('authenticated');
+                    window.location.href = 'login.html';
+                });
             }
         });
     </script>
