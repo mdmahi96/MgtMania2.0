@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/x-icon" href="icn/mgt.jpg">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Management Mania - Home</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+
+
+
+    <div id="content">
+        <header>
+            <img src="icn/mgt.jpg" class="profile-img" style="border-radius: 15px; width: 8%; margin-right: 30px;" alt="Management">
+            <div class="header-content">
+                <h2>Management Mania</h2>
+                <h5>Leading with Clarity</h5>
+                <p>MGT X</p>
+            </div>
+            
+            <button class="mobile-nav-toggle" id="mobileNavToggle">
+                <i class="fas fa-bars"></i>
+            </button>            
+            <nav id="mainNavigation">
+                <ul id="navMenu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="About.html">About</a></li>
+                    <li><a href="https://drive.google.com/drive/folders/1UCQNSCTZgyLOXLe1yAbSj0Fmk5NLig4L?usp=sharing" target="_blank" >Resources</a></li>
+                    <li><a href="https://mrmahi.vercel.app/?i=1" target="_blank" >Contact</a></li>
+					<li><a href="https://bupexpress.vercel.app/?i=1" target="_blank" >BUS</a></li>
+                    
+                </ul>
+                <button class="mobile-nav-close" id="mobileNavClose">
+                    <i class="fas fa-times"></i>
+                </button>
+            </nav>
+			
+			<button class="login-btn" onclick="window.location.href='login.html'">
+			<i class="fas fa-sign-in-alt"></i> Login
+			</button>
+			
+			
+			
+			<button 
+				  onclick="window.open('https://www.facebook.com/bupmgtx', '_blank')"
+				  style="
+					background-color: #050aa6;
+					color: white;
+					border: none;
+					padding: 10px 20px;
+					border-radius: 50px;
+					font-size: 16px;
+					cursor: pointer;
+					display: flex;
+					align-items: center;
+					gap: 10px;
+					transition: all 0.3s;
+					position: relative;
+					overflow: hidden;"
+				  onmouseover="this.style.backgroundColor='#365899'; this.style.transform='scale(1.05)'; this.querySelector('i').style.transform='rotate(360deg)'"
+				  onmouseout="this.style.backgroundColor='#050aa6'; this.style.transform='scale(1)'; this.querySelector('i').style.transform='rotate(0deg)'">
+				  <i class="fab fa-facebook" style="font-size: 18px; transition: transform 0.5s;"></i> Facebook
+				</button>
+			
+        </header>
+        
+		
+		
+		
+        <div class="container">	
+            <!-- Department Section -->
+            <div class="card">
+                <h2><i class="fas fa-university"></i> Department of Management Studies</h2>
+                <div class="department-section">
+                    <div class="department-image">
+                        <img src="icn/mgt.jpg" alt="Department of Management">
+                    </div>
+                    <div class="department-description">
+                        <h3>Excellence in Management Education</h3>
+                        <p>The Department of Management Studies at our university is dedicated to developing future leaders with a strong foundation in business principles and management practices. Established in 2005, our department has grown to become one of the leading centers for management education in the region.</p>
+                        <p>With a faculty of distinguished professionals and researchers, we offer comprehensive programs that blend theoretical knowledge with practical applications. Our curriculum is designed to meet the evolving needs of the business world, ensuring our graduates are well-prepared for the challenges of modern management.</p>
+                        <p>Through innovative teaching methods, industry collaborations, and research initiatives, we strive to create an environment that fosters critical thinking, ethical leadership, and entrepreneurial mindset.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Notice Board -->
+            <div class="card notice-board">
+                <h2><i class="fas fa-bullhorn"></i> Notice Board</h2>
+                <p>Important announcements and updates from the department</p>
+                <div class="table-responsive">
+                    <table class="notice-table">
+                        <thead>
+                            <tr>
+                                <th>Title</th>
+                                <th>Published Date</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Class will start from 6 aplil after Eid Vacation </td>
+                                <td>April 3, 2025</td>
+                                <td><a href="#" class="download-btn" target="_blank"><i class="fas fa-eye"></i> View </a></td>
+                            </tr>
+                            <!-- More notice items can be uncommented when needed -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			 <!-- Gallery -->
+            <div class="card gallery">
+                <h2><i class="fas fa-images"></i> Department Gallery</h2>
+                <p>Moments captured from our various activities</p>
+                <div class="gallery-container" id="galleryContainer">
+                    <div class="gallery-image active">
+                        <img src="gallery/1.jpg" alt="Department Activity 1">
+                        <div class="image-caption">Department Members</div>
+                    </div>
+                    <div class="gallery-image">
+                        <img src="gallery/2.jpg" alt="Department Activity 2">
+                        <div class="image-caption">Faculty-Student Iftar</div>
+                    </div>
+                    <div class="gallery-image">
+                        <img src="gallery/3.jpg" alt="Department Activity 3">
+                        <div class="image-caption">Annual Iftar</div>
+                    </div>
+                    <div class="gallery-image">
+                        <img src="gallery/4.jpg" alt="Department Activity 4">
+                        <div class="image-caption">Iftar Party</div>
+                    </div>
+                    <div class="gallery-image">
+                        <img src="gallery/5.jpg" alt="Department Activity 5">
+                        <div class="image-caption">Iftar Party</div>
+                    </div>
+                    <div class="gallery-image">
+                        <img src="gallery/6.jpg" alt="Department Activity 6">
+                        <div class="image-caption">Iftar Party</div>
+                    </div>
+                    <div class="gallery-image">
+                        <img src="gallery/7.jpg" alt="Department Activity 7">
+                        <div class="image-caption">Iftar Party</div>
+                    </div>
+					
+					 <div class="gallery-image">
+                        <img src="gallery/8.jpg" alt="Department Activity 7">
+                        <div class="image-caption">Eid Card</div>
+                    </div>
+                </div>
+                
+                <!-- Gallery Navigator -->
+                <div class="gallery-nav">
+                    <button class="prev-btn" onclick="prevGalleryImage()" aria-label="Previous image"><i class="fas fa-chevron-left"></i></button>
+                    <div class="gallery-dots">
+                        <span class="dot active" onclick="goToGalleryImage(0)"></span>
+                        <span class="dot" onclick="goToGalleryImage(1)"></span>
+                        <span class="dot" onclick="goToGalleryImage(2)"></span>
+                        <span class="dot" onclick="goToGalleryImage(3)"></span>
+                        <span class="dot" onclick="goToGalleryImage(4)"></span>
+                        <span class="dot" onclick="goToGalleryImage(5)"></span>
+                        <span class="dot" onclick="goToGalleryImage(6)"></span>
+						<span class="dot" onclick="goToGalleryImage(7)"></span>
+                    </div>
+                    <button class="next-btn" onclick="nextGalleryImage()" aria-label="Next image"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+                
+               <!--
+
+			   <!-- Thumbnail Navigator 
+                <div class="gallery-thumbnails">
+                    <div class="thumbnail active" onclick="goToGalleryImage(0)">
+                        <img src="gallery/1.jpg" alt="Thumbnail 1">
+                    </div>
+                    <div class="thumbnail" onclick="goToGalleryImage(1)">
+                        <img src="gallery/2.jpg" alt="Thumbnail 2">
+                    </div>
+                    <div class="thumbnail" onclick="goToGalleryImage(2)">
+                        <img src="gallery/3.jpg" alt="Thumbnail 3">
+                    </div>
+                    <div class="thumbnail" onclick="goToGalleryImage(3)">
+                        <img src="gallery/4.jpg" alt="Thumbnail 4">
+                    </div>
+                    <div class="thumbnail" onclick="goToGalleryImage(4)">
+                        <img src="gallery/5.jpg" alt="Thumbnail 5">
+                    </div>
+                    <div class="thumbnail" onclick="goToGalleryImage(5)">
+                        <img src="gallery/6.jpg" alt="Thumbnail 6">
+                    </div>
+                    <div class="thumbnail" onclick="goToGalleryImage(6)">
+                        <img src="gallery/7.jpg" alt="Thumbnail 7">
+                    </div>
+                </div> -->
+				
+		
+				
+				
+				
+				
+				
+				
+           
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+            
+            <!-- Event Slider -->
+            <div class="card">
+                <h2><i class="fas fa-calendar-alt"></i> Upcoming Events</h2>
+                <p>Click on any event poster for more details</p>
+                <div class="event-slider" id="eventSlider">
+                    <div class="event-slide active">
+                        <a href="icn/event.jpg">
+                            <img src="icn/event.jpg" alt="No Upcoming Events">
+                            <div class="event-info">
+                                <h4>Stay Tuned!</h4>
+                                <p>No upcoming events currently scheduled. Check back soon for new announcements.</p>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- More event slides can be uncommented when needed -->
+                </div>
+                
+                <!-- Navigator -->
+                <div class="slider-nav">
+                    <button class="prev-btn" onclick="prevSlide()" aria-label="Previous event"><i class="fas fa-chevron-left"></i></button>
+                    <div class="slider-dots">
+                        <span class="dot active" onclick="goToSlide(0)"></span>
+                    </div>
+                    <button class="next-btn" onclick="nextSlide()" aria-label="Next event"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+			
+			
+			
+		
+           
+        </div>
+        
+        <footer>
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>Management Mania</h3>
+                    <p>Department of Management Studies - BUP</p>
+                    <p><i class="fas fa-map-marker-alt"></i> FBS Tower, BUP, Dhaka, 1216 </p>
+                    <p><i class="fas fa-envelope"></i> bupmgtx@gmail.com</p>
+                   <!-- <p><i class="fas fa-phone"></i> +880 123 456 7890</p> -->
+                </div>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/bupmgtx" aria-label="Facebook"><i class="fab fa-facebook"></i> facebook.com/bupmgtx </a>
+                  <!--  <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a> -->
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p style="margin-top: 15px; color: #ffffff;">&copy; 2025 . <strong><a style="color: #ffffff;" href="https://mrmahi.vercel.app/">MD Muztaba Rafid Mahi (MGT-10)</a></strong>.<br> All rights reserved.</p>
+                <a href="https://www.facebook.com/Muztaba.Rafid.Mahi">
+                    <img style="border-radius: 100px; display: block; margin: 0 auto; width: 60px;" src="icn/Mahi.jpg" alt="Mahi">
+                </a>
+            </div>
+        </footer>
+    </div>
+    
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script src="js/gallery.js"></script>
+
+
+
+<!-- Added smooth scrolling and improved gallery functionality -->
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // Auto-rotate gallery images
+        let galleryInterval;
+        const startGalleryAutoplay = () => {
+            galleryInterval = setInterval(() => {
+                nextGalleryImage();
+            }, 2000); // Change image every 5 seconds
+        };
+        
+        // Start autoplay and handle pause on hover
+        window.addEventListener('DOMContentLoaded', () => {
+            startGalleryAutoplay();
+            
+            const galleryContainer = document.getElementById('galleryContainer');
+            if (galleryContainer) {
+                galleryContainer.addEventListener('mouseenter', () => {
+                    clearInterval(galleryInterval);
+                });
+                
+                galleryContainer.addEventListener('mouseleave', () => {
+                    startGalleryAutoplay();
+                });
+            }
+        });
+    </script>
+
+
+
+</body>
+</html>

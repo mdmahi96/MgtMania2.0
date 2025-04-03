@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="icon" type="image/x-icon" href="icn/mgt.jpg">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Management Mania - Login</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f7fd;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        
+        .login-container {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+        
+        .login-logo {
+            width: 80px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+        }
+        
+        h2 {
+            color: #333;
+            margin-bottom: 5px;
+        }
+        
+        h5 {
+            color: #666;
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+        
+        .input-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+            font-weight: bold;
+        }
+        
+        input[type="password"] {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+        
+        .login-btn {
+            background-color: #4a6fdc;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            width: 100%;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        
+        .login-btn:hover {
+            background-color: #3a5bc1;
+        }
+        
+        .error-message {
+            color: #e74c3c;
+            margin-top: 15px;
+            display: none;
+        }
+        
+        footer {
+            position: absolute;
+            bottom: 10px;
+            text-align: center;
+            width: 100%;
+            color: #777;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container" >
+        <img src="icn/mgt.jpg" class="login-logo" alt="Management">
+        <h2 style="margin-bottom: -6px;" >Management Mania</h2>
+		<h5 style="margin-bottom: -6px;" >MGT10</h5>
+        <h5 style="margin-bottom: -4px;">Leading with Clarity</h5>
+        
+        <div class="input-group">
+            <label for="password"><i class="fas fa-lock"></i> Password</label>
+            <input type="password" id="password" placeholder="Enter password to access site">
+        </div>
+        
+        <button id="loginBtn" class="login-btn">
+            <i class="fas fa-sign-in-alt"></i> Login
+        </button>
+        
+        <p id="errorMessage" class="error-message">
+            <i class="fas fa-exclamation-circle"></i> Incorrect password. Please try again.
+        </p>
+    </div>
+    
+    <footer>
+        <p> <strong> <a style="color: ##ffffff;" href="https://mrmahi.vercel.app/">&copy; 2025 . MD Muztaba Rafid Mahi (MGT-10)</strong>. All rights reserved.</p></a>
+		
+		
+    </footer>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Check if already authenticated
+            if (sessionStorage.getItem('authenticated') === 'true') {
+                window.location.href = 'portal.html';
+                return;
+            }
+            
+            const loginBtn = document.getElementById('loginBtn');
+            const passwordInput = document.getElementById('password');
+            const errorMessage = document.getElementById('errorMessage');
+            
+            // Set the password (replace this with your preferred password)
+            const correctPassword = "MGT25";
+            
+            loginBtn.addEventListener('click', checkPassword);
+            passwordInput.addEventListener('keyup', function(event) {
+                if (event.key === "Enter") {
+                    checkPassword();
+                }
+            });
+            
+            function checkPassword() {
+                const enteredPassword = passwordInput.value;
+                
+                if (enteredPassword === correctPassword) {
+                    // Save authentication status in sessionStorage
+                    sessionStorage.setItem('authenticated', 'true');
+                    
+                    // Redirect to main page
+                    window.location.href = 'portal.html';
+                } else {
+                    // Show error message
+                    errorMessage.style.display = 'block';
+                    passwordInput.value = '';
+                    passwordInput.focus();
+                }
+            }
+        });
+    </script>
+	
+	
+	
+	<script>
+  window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
+</script>
+<script defer src="/_vercel/speed-insights/script.js"></script>
+	
+	
+	
+	
+	
+</body>
+</html>
