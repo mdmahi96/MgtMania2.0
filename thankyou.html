@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You | Muztaba Rafid</title>
+    <link rel="icon" type="image/x-icon" href="icn/mgt.jpg">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="w3-black">
+
+<!-- Page Content -->
+<div class="w3-padding-large" id="main" style="margin-left: 0; max-width: 100%;">
+
+  <!-- Thank You Section -->
+  <div class="w3-padding-32 w3-content animate-on-scroll" id="thankyou" style="max-width: 800px; margin: auto;">
+    <h2 class="w3-text-light-grey" style="font-size: 2.5rem; margin-bottom: 10px; text-align: center;">Message Sent!</h2>
+    <p style="color: var(--text-secondary); margin-bottom: 20px; text-align: center;">Thank you for reaching out</p>
+    <hr style="width:70px; border: 2px solid var(--primary); margin: 0 auto 40px auto;">
+
+    <div class="glass-card animate-on-scroll" style="text-align: center; padding: 40px 20px;">
+      <div style="margin-bottom: 30px;">
+        <i class="fas fa-check-circle" style="font-size: 5rem; color: var(--primary); animation: pulse 2s infinite;"></i>
+      </div>
+      
+      <h3 class="w3-text-light-grey" style="margin-bottom: 20px;">Thank You for Regestration!</h3>
+      
+      <p style="color: var(--text-secondary); margin-bottom: 30px; max-width: 600px; margin-left: auto; margin-right: auto;">
+       
+      </p>
+      
+      <a href="index.html" class="custom-btn">
+        <i class="fas fa-home"></i> BACK TO HOMEPAGE
+      </a>
+    </div>
+    
+    <!-- Footer -->
+   
+  </div>
+</div>
+
+<style>
+  @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+      100% { transform: scale(1); }
+  }
+  
+  .animate-on-scroll {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+  
+  .animate-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  body {
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--background, #111827);
+  }
+  
+  #main {
+    width: 100%;
+    padding: 20px;
+  }
+  
+  .glass-card {
+    background: rgba(30, 41, 59, 0.7);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  }
+  
+  .custom-btn {
+    background: linear-gradient(45deg, var(--primary, #3a86ff), var(--secondary, #ff006e));
+    color: white;
+    padding: 12px 24px;
+    border-radius: 30px;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .custom-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  }
+  
+  .social-icon {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--text-primary, #f1f5f9);
+    margin: 0 8px;
+    transition: all 0.3s ease;
+  }
+  
+  .social-icon:hover {
+    background: var(--primary, #3a86ff);
+    color: white;
+    transform: translateY(-3px);
+  }
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const themes = {
+    default: { 
+      primary: '#3a86ff', 
+      secondary: '#ff006e', 
+      background: '#111827',
+      sidebarBg: '#1e293b',
+      cardBg: 'rgba(30, 41, 59, 0.7)',
+      textPrimary: '#f1f5f9',
+      textSecondary: '#94a3b8'
+    },
+    dark: { 
+      primary: '#8b5cf6', 
+      secondary: '#ec4899', 
+      background: '#09090b',
+      sidebarBg: '#18181b',
+      cardBg: 'rgba(24, 24, 27, 0.7)',
+      textPrimary: '#f1f5f9',
+      textSecondary: '#94a3b8'
+    },
+    elegant: { 
+      primary: '#10b981', 
+      secondary: '#f59e0b', 
+      background: '#0f172a',
+      sidebarBg: '#1e293b',
+      cardBg: 'rgba(30, 41, 59, 0.7)',
+      textPrimary: '#f1f5f9',
+      textSecondary: '#94a3b8'
+    }
+  };
+  
+  // Apply default theme
+  document.documentElement.style.setProperty('--primary', themes.default.primary);
+  document.documentElement.style.setProperty('--secondary', themes.default.secondary);
+  document.documentElement.style.setProperty('--background', themes.default.background);
+  document.documentElement.style.setProperty('--sidebar-bg', themes.default.sidebarBg);
+  document.documentElement.style.setProperty('--card-bg', themes.default.cardBg);
+  document.documentElement.style.setProperty('--text-primary', themes.default.textPrimary);
+  document.documentElement.style.setProperty('--text-secondary', themes.default.textSecondary);
+  document.documentElement.style.setProperty('--hover-color', themes.default.primary);
+  
+  // Animate elements immediately since this is a thank you page
+  setTimeout(() => {
+    document.querySelectorAll('.animate-on-scroll').forEach(el => {
+      el.classList.add('visible');
+    });
+  }, 300);
+  
+  // Add animation delay to stagger animations
+  document.querySelectorAll('.animate-on-scroll').forEach((el, index) => {
+    el.style.transitionDelay = `${index * 0.1}s`;
+  });
+});
+</script>
+</body>
+</html>
