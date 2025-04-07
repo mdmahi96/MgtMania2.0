@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	 <link rel="icon" type="image/x-icon" href="icn/mgt.jpg">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment Registration Form</title>
+    <link rel="stylesheet" href="css/team-form-styles.css">
+	  
+    <style>
+        /* Additional styles for the dropdown */
+        select {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            font-size: 16px;
+            transition: border 0.3s, box-shadow 0.3s;
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--white);
+            appearance: none;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="%23333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>');
+            background-repeat: no-repeat;
+            background-position: right 15px center;
+            cursor: pointer;
+        }
+        
+        select:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+        }
+        
+        /* Fade effect for member list changes */
+        @keyframes fadeEffect {
+            from {opacity: 0.5;}
+            to {opacity: 1;}
+        }
+        
+        .fade {
+            animation: fadeEffect 0.5s;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+	
+
+
+
+
+
+	<header>
+                     
+            <nav id="mainNavigation">
+                <ul id="navMenu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="https://drive.google.com/drive/folders/1UCQNSCTZgyLOXLe1yAbSj0Fmk5NLig4L?usp=sharing" target="_blank" >Resources</a></li>
+                    <li><a href="https://mrmahi.vercel.app/?i=1" target="_blank" >Contact</a></li>
+					<li><a href="https://bupexpress.vercel.app/?i=1" target="_blank" >BUS</a></li>
+                    
+                </ul>
+			
+                
+				</nav>
+			
+			
+			
+        </header>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+        <h1>Assignment Team Registration</h1>
+        
+        <!-- Form with FormSubmit action -->
+        <form id="teamForm" action="https://formsubmit.co/bupmgtx@gmail.com" method="POST">
+		<input type="hidden" name="_subject" value="New Contact Form Submission | Team Regestration">
+		 <input type="hidden" name="_captcha" value="false">
+		<input type="hidden" name="_next" value="https://mgt10.vercel.app/thankyou.html">
+		
+		
+			
+           
+            
+            <div class="form-group">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="section">Section:</label>
+                <select id="section" name="section" required>
+                    <option value="" disabled selected>Select a section</option>
+                    <option value="sectionA">Section A</option>
+                    <option value="sectionB">Section B</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="teamMembers">Select Team Members <b>including you</b> (max 3):</label>
+                <input type="text" id="searchBox" placeholder="Search members by name...">
+                <div class="member-list" id="memberList">
+                    <!-- Members will be populated here -->
+                </div>
+                <div class="selected-members" id="selectedMembers">
+                    <!-- Selected members will appear here -->
+                </div>
+                <span class="error" id="memberError"></span>
+            </div>
+            
+            <!-- Hidden inputs for FormSubmit -->
+            <input type="hidden" name="teamMembersData" id="teamMembersData">
+            <input type="hidden" name="_subject" value="New Team Registration">
+            <input type="hidden" name="_template" value="table">
+            
+            <button type="submit">Submit Registration</button>
+        </form>
+    </div>
+
+    <script>
+        // Section-specific member data
+        const sectionMembers = {
+            sectionA: [
+                 { id: 1, name: "TAHMIDUR RAHMAN SAMIN", number: "24241609009" },
+  { id: 2, name: "SAMIUN BIN AZAD", number: "25241610003" },
+  { id: 3, name: "MD. RUBAYET FERDOUS RAFIN", number: "25241610007" },
+  { id: 4, name: "MD. THANVIR HOSSAIN ALIF", number: "25241610011" },
+  { id: 5, name: "SK. ANISA ISLAM", number: "25241610017" },
+  { id: 6, name: "SADMAN SAKIB FAHIM", number: "25241610033" },
+  { id: 7, name: "SARAH MAHBUB", number: "25241610037" },
+  { id: 8, name: "MOMSHAD TAMIMI", number: "25241610049" },
+  { id: 9, name: "ARNON JISAN HASDA", number: "25241610065" },
+  { id: 10, name: "BATROWA DOFO MONA", number: "25241610067" },
+  { id: 11, name: "ZAIMA ZAHEEN IFFAT", number: "25241610071" },
+  { id: 12, name: "NAZIFA ALAM NOBONI", number: "25241610075" },
+  { id: 13, name: "TABASSUM BINTE TAREK", number: "25241610077" },
+  { id: 14, name: "SIAM SAIM SHIRSHO", number: "25241610081" },
+  { id: 15, name: "AFRIN SHOYA PUSHPA", number: "25241610083" },
+  { id: 16, name: "LABIBA MOSTAEEN", number: "25241610085" },
+  { id: 17, name: "NEHLA NISHAT KHAN", number: "25241610089" },
+  { id: 18, name: "KAZI FARZAN AHMED", number: "25241610093" },
+  { id: 19, name: "MAHJUZA BINTE ZIAD", number: "25241610095" },
+  { id: 20, name: "NADIA NIRAN HUSSAIN", number: "25241610097" },
+  { id: 21, name: "ZINNUR ROKAIYA", number: "25241610099" },
+  { id: 22, name: "ANIQA ANAWAR", number: "25241610101" },
+  { id: 23, name: "SARAH HAQUE", number: "25241610103" },
+  { id: 24, name: "AZIZAH ZAHIN NANJEEBA", number: "25241610105" },
+  { id: 25, name: "SAFIA ISLAM NIRMONI", number: "25241610107" },
+  { id: 26, name: "HUMAIRA ZARIN TALUKDER", number: "25241610109" },
+  { id: 27, name: "ZAREEFA BINTE ANOWER", number: "25241610111" },
+  { id: 28, name: "FATEMA TUZ JAHURA MILU", number: "25241610113" },
+  { id: 29, name: "MEGHDUT KABIR", number: "25241610115" },
+  { id: 30, name: "SHARIKA TAZRIA", number: "25241610117" },
+  { id: 31, name: "ZINIARA YESMINE", number: "25241610119" },
+  { id: 32, name: "RAZZIN MUHAMMAD DILSHAN", number: "25241610121" },
+  { id: 33, name: "NAFIS HOSSAIN", number: "25241610123" },
+  { id: 34, name: "FARIA MEHZABEEN", number: "25241610125" },
+  { id: 35, name: "S M ITRAT ZAMAN (ABRAR)", number: "25241610127" },
+  { id: 36, name: "MD. SAIFULLAH AL SAMI", number: "25241610129" },
+  { id: 37, name: "NISHAT LAMIA OISHI", number: "25241610131" },
+  { id: 38, name: "WASHIMA HAQUE PARAMA", number: "25241610133" },
+  { id: 39, name: "NABA CHOWDHURY", number: "25241610135" },
+  { id: 40, name: "NAHIAN TASNIM", number: "25241610137" },
+  { id: 41, name: "ZAARA TAZRIAN", number: "25241610139" },
+  { id: 42, name: "ARIANA NAWAR CHOWDHURY", number: "25241610141" },
+  { id: 43, name: "M. ZAWAD BILLAH KHAN", number: "25241610143" },
+  { id: 44, name: "MANFIA TARANNUM MAISHA", number: "25241610145" },
+  { id: 45, name: "MD. KHALID SAIFULLAH SHAWON", number: "25241610147" },
+  { id: 46, name: "ISKAT JAHAN PUSPO", number: "25241610149" },
+  { id: 47, name: "RAYYAN AHMED CHOWDHURY", number: "25241610151" },
+  { id: 48, name: "SHALAHIN SHAFIN SHOJIB", number: "25241610153" },
+  { id: 49, name: "MAHMUDUL HASSAN RIFAT", number: "25241610155" },
+  { id: 50, name: "ATIYA TABASSUM", number: "25241610157" },
+  { id: 51, name: "JAHIDUR RAHMAN JIHAD", number: "25241610159" },
+  { id: 52, name: "RAFIA ISLAM", number: "25241610161" },
+  { id: 53, name: "JUBAYER AMIN", number: "25241610163" },
+  { id: 54, name: "MD. ZIAUL ALAM RAHAT", number: "25241610165" },
+  { id: 55, name: "SOMRAT HOSSAIN SAIKAT", number: "25241610167" },
+  { id: 56, name: "MUBTASIM FUAD", number: "25241610169" },
+  { id: 57, name: "MD. SANJEED MAMUN JITU", number: "25241610171" },
+  { id: 58, name: "HASNAT SHAHRIAR", number: "25241610173" },
+  { id: 59, name: "K M FUAD BIN AYUB", number: "25241610175" },
+  { id: 60, name: "PARSA NAWAR", number: "25241610177" }
+            ],
+            sectionB: [
+                { id: 61, name: "TABASA ALAM MIM", number: "23241608112" },
+  { id: 62, name: "JUBAER HISHAM SHAFI", number: "25241610002" },
+  { id: 63, name: "SYEDA PARIZAD ROOMY", number: "25241610006" },
+  { id: 64, name: "REDOWANUL HOQUE BHUIYAN AYON", number: "25241610012" },
+  { id: 65, name: "SAMIA SADEK ILMA", number: "25241610016" },
+  { id: 66, name: "SHAIKH ABU DAUD", number: "25241610020" },
+  { id: 67, name: "MUMTAHANA TUBA", number: "25241610030" },
+  { id: 68, name: "ASADUR ZAMAN PRANTO", number: "25241610034" },
+  { id: 69, name: "TASNIA SHAHRIAR", number: "25241610036" },
+  { id: 70, name: "AHNAF HAMEED RAUF", number: "25241610042" },
+  { id: 71, name: "MEHAJABIN AKTER", number: "25241610046" },
+  { id: 72, name: "MALIHA BINTE MAMUN", number: "25241610056" },
+  { id: 73, name: "MD. MUZTABA RAFID MAHI", number: "25241610060" },
+  { id: 74, name: "RAISHA SULTANA RAIYA", number: "25241610074" },
+  { id: 75, name: "MD. SAMIUL SHIKDER", number: "25241610076" },
+  { id: 76, name: "ANISA NUSRAT TAHSIN", number: "25241610080" },
+  { id: 77, name: "AFTAN UL HAQUE FARHAN", number: "25241610082" },
+  { id: 78, name: "SALSABIL NUWWAR KUDROT RAMITA", number: "25241610084" },
+  { id: 79, name: "NUSAIBA RAHMAN", number: "25241610086" },
+  { id: 80, name: "MD. MUNTASIR ISLAM", number: "25241610088" },
+  { id: 81, name: "MD ABRAR JAHIN", number: "25241610090" },
+  { id: 82, name: "MUNSHI MD. FAHIM FAISAL", number: "25241610092" },
+  { id: 83, name: "MD. TAWHIDUR RAHMAN", number: "25241610094" },
+  { id: 84, name: "HUMAIRA HASAN", number: "25241610096" },
+  { id: 85, name: "ZARA TAHIYAT", number: "25241610098" },
+  { id: 86, name: "TASNEEM SAMEEHA ISLAM", number: "25241610100" },
+  { id: 87, name: "NUZHAT HASAN", number: "25241610102" },
+  { id: 88, name: "TAHSIN AHMED SOHA", number: "25241610104" },
+  { id: 89, name: "FARIHA RAHMAN SHEMONTI", number: "25241610106" },
+  { id: 90, name: "ANNISA AMIR", number: "25241610108" },
+  { id: 91, name: "KAZI RAISA MOSTAFA BORSHONA", number: "25241610110" },
+  { id: 92, name: "ADIB BIN YOUSUF", number: "25241610114" },
+  { id: 93, name: "ABDULLAH AL MUNEM MUHTASIM", number: "25241610116" },
+  { id: 94, name: "TAHIA TASNIM NASHITA", number: "25241610118" },
+  { id: 95, name: "IFTA ARNOB SARKER", number: "25241610120" },
+  { id: 96, name: "K. M LABIB MARZUQ", number: "25241610122" },
+  { id: 97, name: "S M SAKIF DAIYAN", number: "25241610124" },
+  { id: 98, name: "SANJIDA ISLAM MITHY", number: "25241610126" },
+  { id: 99, name: "NOSHIN TARANNUM ARA", number: "25241610128" },
+  { id: 100, name: "IRFAN IBNA SAYED", number: "25241610130" },
+  { id: 101, name: "MD. JAHIN JAMAN EZAD", number: "25241610134" },
+  { id: 102, name: "INAN AHMAD", number: "25241610136" },
+  { id: 103, name: "CHOWDHURY MAHADIR MUKADDAS", number: "25241610138" },
+  { id: 104, name: "WAHED AL MAHMUD AHNAF", number: "25241610140" },
+  { id: 105, name: "ZANNATUL AFRIN DORIN", number: "25241610142" },
+  { id: 106, name: "NABEEHA TAIYEBA", number: "25241610144" },
+  { id: 107, name: "MOHAMMAD MASHRUR RAHMAN", number: "25241610146" },
+  { id: 108, name: "ASHFI ABEDIN", number: "25241610148" },
+  { id: 109, name: "MST. ISRAT JAHAN SADIA", number: "25241610150" },
+  { id: 110, name: "SILVIA KHAN NOVA", number: "25241610152" },
+  { id: 111, name: "MOSHAMMAT ROWNAK JAHAN", number: "25241610154" },
+  { id: 112, name: "QUAZI RAUFUL HAFIZ", number: "25241610156" },
+  { id: 113, name: "SARA ARIFIN", number: "25241610158" },
+  { id: 114, name: "MOHAMMAD WALID BIN AKHTAR", number: "25241610160" },
+  { id: 115, name: "SHAKIRA ALAM", number: "25241610162" },
+  { id: 116, name: "SUMYA AKTER KEYA", number: "25241610164" },
+  { id: 117, name: "MD. SAMIUL ISLAM SOWAD", number: "25241610166" },
+  { id: 118, name: "AJMAEEN MAHTAB", number: "25241610168" },
+  { id: 119, name: "AMRITA BISWAS", number: "25241610170" },
+  { id: 120, name: "NAFEES ABDULLAH", number: "25241610172" },
+  { id: 121, name: "MD. RAKIBUL HASAN", number: "25241610174" },
+  { id: 122, name: "SAMIHA ZAMAN SHOSHI", number: "25241610176" },
+  { id: 123, name: "FARIHA AFRIN EASHA", number: "25241610178" }
+            ]
+        };
+
+        // Current members based on selected section
+        let members = [];
+
+        const memberList = document.getElementById('memberList');
+        const searchBox = document.getElementById('searchBox');
+        const selectedMembersContainer = document.getElementById('selectedMembers');
+        const memberError = document.getElementById('memberError');
+        const form = document.getElementById('teamForm');
+        const teamMembersDataInput = document.getElementById('teamMembersData');
+        const sectionSelect = document.getElementById('section');
+        
+        // Selected members array
+        let selectedMembers = [];
+
+        // Section change handler
+        sectionSelect.addEventListener('change', function() {
+            const selectedSection = this.value;
+            
+            // Reset selected members when section changes
+            selectedMembers = [];
+            updateSelectedMembersDisplay();
+            
+            // Update members list based on selected section
+            members = sectionMembers[selectedSection] || [];
+            
+            // Apply fade effect to member list
+            memberList.classList.remove('fade');
+            void memberList.offsetWidth; // Trigger reflow
+            memberList.classList.add('fade');
+            
+            // Repopulate the list
+            populateMembers();
+            
+            // Enable search box if members are available
+            searchBox.disabled = members.length === 0;
+            if (members.length === 0) {
+                searchBox.placeholder = "Please select a section first";
+            } else {
+                searchBox.placeholder = "Search members by name...";
+            }
+        });
+
+        // Populate member list
+        function populateMembers(query = '') {
+            memberList.innerHTML = '';
+            
+            const filteredMembers = members.filter(member => 
+                member.name.toLowerCase().includes(query.toLowerCase())
+            );
+            
+            if (filteredMembers.length === 0 && members.length > 0) {
+                const noResults = document.createElement('div');
+                noResults.className = 'member-item';
+                noResults.style.fontStyle = 'italic';
+                noResults.style.color = '#999';
+                noResults.textContent = 'No matching members found';
+                memberList.appendChild(noResults);
+                return;
+            }
+            
+            filteredMembers.forEach(member => {
+                const memberItem = document.createElement('div');
+                memberItem.className = 'member-item';
+                memberItem.textContent = `${member.name} - ${member.number}`;
+                memberItem.dataset.id = member.id;
+                memberItem.dataset.name = member.name;
+                memberItem.dataset.number = member.number;
+                
+                // Check if member is already selected
+                const isSelected = selectedMembers.some(m => 
+                    m.id === member.id && m.section === sectionSelect.value
+                );
+                
+                if (isSelected) {
+                    memberItem.style.backgroundColor = 'rgba(52, 152, 219, 0.2)';
+                }
+                
+                memberItem.addEventListener('click', () => selectMember(member));
+                memberList.appendChild(memberItem);
+            });
+        }
+
+        // Select a member
+        function selectMember(member) {
+            // Add section info to member
+            const memberWithSection = {
+                ...member,
+                section: sectionSelect.value
+            };
+            
+            const isAlreadySelected = selectedMembers.some(m => 
+                m.id === member.id && m.section === sectionSelect.value
+            );
+            
+            if (isAlreadySelected) {
+                // Remove member if already selected
+                selectedMembers = selectedMembers.filter(m => 
+                    !(m.id === member.id && m.section === sectionSelect.value)
+                );
+            } else {
+                // Add member if not selected and if limit not reached
+                if (selectedMembers.length < 3) {
+                    selectedMembers.push(memberWithSection);
+                } else {
+                    memberError.textContent = 'Maximum 3 members allowed';
+                    setTimeout(() => {
+                        memberError.textContent = '';
+                    }, 3000);
+                    return;
+                }
+            }
+            
+            updateSelectedMembersDisplay();
+            populateMembers(searchBox.value);
+            
+            // Update hidden input with selected members data
+            updateTeamMembersData();
+        }
+
+        // Update the selected members display
+        function updateSelectedMembersDisplay() {
+            selectedMembersContainer.innerHTML = '';
+            
+            if (selectedMembers.length === 0) {
+                const placeholder = document.createElement('span');
+                placeholder.style.color = '#999';
+                placeholder.style.fontStyle = 'italic';
+                placeholder.textContent = 'No members selected yet';
+                selectedMembersContainer.appendChild(placeholder);
+                return;
+            }
+            
+            selectedMembers.forEach(member => {
+                const memberTag = document.createElement('div');
+                memberTag.className = 'selected-member';
+                
+                // Show section in the tag if we have members from different sections
+                const hasMixedSections = selectedMembers.some(m => m.section !== selectedMembers[0].section);
+                const displayText = hasMixedSections ? 
+                    `${member.name} - ${member.number} (${member.section === 'sectionA' ? 'A' : 'B'})` : 
+                    `${member.name} - ${member.number}`;
+                
+                const memberText = document.createTextNode(displayText);
+                memberTag.appendChild(memberText);
+                
+                const removeBtn = document.createElement('span');
+                removeBtn.className = 'remove-btn';
+                removeBtn.textContent = 'x';
+                removeBtn.addEventListener('click', () => {
+                    selectedMembers = selectedMembers.filter(m => 
+                        !(m.id === member.id && m.section === member.section)
+                    );
+                    updateSelectedMembersDisplay();
+                    
+                    // Only repopulate if we're viewing the same section as the removed member
+                    if (sectionSelect.value === member.section) {
+                        populateMembers(searchBox.value);
+                    }
+                    
+                    // Update hidden input with selected members data
+                    updateTeamMembersData();
+                });
+                
+                memberTag.appendChild(removeBtn);
+                selectedMembersContainer.appendChild(memberTag);
+            });
+        }
+
+        // Update hidden input with selected members data
+        function updateTeamMembersData() {
+            teamMembersDataInput.value = JSON.stringify(selectedMembers);
+        }
+
+        // Search functionality
+        searchBox.addEventListener('input', () => {
+            populateMembers(searchBox.value);
+        });
+
+        // Form submission
+        form.addEventListener('submit', (e) => {
+            
+            const name = document.getElementById('name').value;
+            const section = document.getElementById('section').value;
+            
+            if (!teamName || !name || !section) {
+                e.preventDefault(); // Prevent form submission
+                alert('Please fill in all required fields');
+                return;
+            }
+            
+            if (selectedMembers.length === 0) {
+                e.preventDefault(); // Prevent form submission
+                memberError.textContent = 'Please select at least one team member';
+                return;
+            }
+            
+            // Update hidden input with selected members data one more time to be safe
+            updateTeamMembersData();
+            
+            // Form will submit naturally to FormSubmit
+        });
+
+        // Disable search initially until section is selected
+        searchBox.disabled = true;
+        searchBox.placeholder = "Please select a section first";
+        
+        // Initialize with empty member list
+        populateMembers();
+        updateSelectedMembersDisplay();
+    </script>
+</body>
+</html>
