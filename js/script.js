@@ -2435,8 +2435,7 @@ function showStudentDetails(roll) {
             { key: 'GENDER', label: 'Gender', icon: 'venus-mars' },
             { key: 'FATHER', label: 'Father\'s Name', icon: 'user' },
             { key: 'ADMISSION_ROLL', label: 'Admission Roll', icon: 'id-badge' },
-            { key: 'QUOTA', label: 'Quota', icon: 'certificate' },
-            { key: 'PHOTO', label: 'Photo Filename', icon: 'image' }
+           
         ];
         
         // Create a container for staggered animation
