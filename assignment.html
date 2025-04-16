@@ -477,10 +477,10 @@ const sectionMembers = {
                 );
             } else {
                 // Add member if not selected and if limit not reached
-                if (selectedMembers.length < 3) {
+                if (selectedMembers.length < 10) {
                     selectedMembers.push(memberWithSection);
                 } else {
-                    memberError.textContent = 'Maximum 3 members allowed';
+                    memberError.textContent = 'Maximum members reached';
                     setTimeout(() => {
                         memberError.textContent = '';
                     }, 3000);
